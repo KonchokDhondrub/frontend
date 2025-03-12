@@ -11,6 +11,7 @@ body {
   position: relative;
   background-color: rgb(66, 66, 67);
 }
+
 body::before {
   content: "";
   position: absolute;
@@ -23,6 +24,7 @@ body::before {
 h1 {
   color: #f5763c;
 }
+
 div {
   font-size: 20px;
 }
@@ -32,6 +34,7 @@ div {
   justify-content: center;
   gap: 20px;
 }
+
 .column {
   width: 500px;
   padding: 30px;
