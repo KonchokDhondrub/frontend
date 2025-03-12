@@ -1,0 +1,46 @@
+body {
+  font-family: Courier;
+  background: #828d98;
+  color: rgb(69, 69, 62);
+  margin-left: 30px;
+  margin-top: 0px;
+  background-image: url("https://media.istockphoto.com/id/1843005849/de/foto/portr%C3%A4t-eines-l%C3%A4chelnden-selbstbewussten-managers-der-auf-eine-kopierfl%C3%A4che-f%C3%BCr-werbung-auf.webp?s=2048x2048&w=is&k=20&c=seIupk53qqaCbtsWEnJeOJ7XmqzgQlgTXVzlAPbVfOs=");
+  background-size: cover;
+}
+.header {
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  color: #0c2c4c;
+}
+a:hover {
+  color: rgb(135, 19, 19);
+  text-decoration: underline;
+}
+table {
+  font-size: 24px;
+  border-spacing: 14px;
+}
+table.head {
+  border: none;
+}
+td,
+th {
+  padding: 0px;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img,
+table,
+div {
+  width: 560px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #0e2d4c;
+}
