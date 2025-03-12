@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FrontEnd Lessons</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="src/script_add_lessons_list.js"></script>
   </head>
   <body class="background">
     <h1 class="header">FrontEnd</h1>
@@ -15,16 +16,9 @@
       <div class="column">
         <h1>Lessons</h1>
 
-        <div class="row">
-          <div><a href="Lesson_20250311/" title="HTML Intro">1: HTML Intro</a></div>
-          <div>11.03.2025</div>
-        </div>
-        <div class="row">
-          <div><a href="Lesson_20250312/" title="CSS Intro">2: CSS Intro</a></div>
-          <div>12.03.2025</div>
-        </div>
-      </div>
+        <div id="lessons-list-container">
 
+      <!-- Секция под домашку -->
       <!-- <div class="column">
         <h1>Homework</h1>
         <div class="row">
