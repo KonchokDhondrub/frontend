@@ -1,7 +1,14 @@
 * {
-  color: rgb(229, 230, 231);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(233, 231, 203, 0.806);
+  font-size: 20px;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   font-weight: 900;
+
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 body {
@@ -23,10 +30,21 @@ body::before {
 
 h1 {
   color: #f5763c;
+  font-size: 2em;
+  font-weight: 600;
 }
 
-div {
-  font-size: 20px;
+h1.header {
+  font-size: 50px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(233, 231, 203);
+  transition: color 0.5s ease;
 }
 
 .container {
@@ -36,9 +54,14 @@ div {
 }
 
 .column {
-  width: 500px;
+  width: 400px;
   padding: 30px;
   padding-top: 0px;
   border: 1px solid rgb(131, 130, 130);
-  text-wrap-mode: nowrap;
+  text-wrap-mode: wrap;
+}
+.row {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
 }
