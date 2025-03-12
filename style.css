@@ -1,7 +1,40 @@
-body{
-    margin-top: 30px;
-    margin-left: 30px;
-    background-color: rgb(195, 223, 248);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+* {
+  color: rgb(229, 230, 231);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+}
+
+body {
+  margin: 30px;
+  min-height: 100vh;
+  background: url("img/bg.jpg") center/cover no-repeat fixed;
+  position: relative;
+  background-color: rgb(66, 66, 67);
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+h1 {
+  color: #f5763c;
+}
+div {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.column {
+  width: 500px;
+  padding: 30px;
+  padding-top: 0px;
+  border: 1px solid rgb(131, 130, 130);
+  text-wrap-mode: nowrap;
 }
