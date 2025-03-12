@@ -2,7 +2,7 @@
   color: rgba(233, 231, 203, 0.806);
   font-size: 20px;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
-  font-weight: 900;
+  /* font-weight: 900; */
 
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -12,11 +12,10 @@
 }
 
 body {
-  min-height: 0vh;
   margin: 0;
   background: url("img/bg.jpg") center/cover no-repeat fixed;
   position: relative;
-  background-color: rgb(66, 66, 67);
+  background-color: rgb(49, 49, 49);
 }
 
 body::before {
