@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(228, 248, 245);
+  background-color: rgba(179, 195, 193, 0.534);
   font-family: Arial, Helvetica, sans-serif;
   margin: 30px;
 }
@@ -24,4 +24,9 @@ p {
 
 #heading {
   color: rgb(196, 11, 196);
+}
+
+ol > li {
+  text-align: left;
+  font-weight: 500;
 }
