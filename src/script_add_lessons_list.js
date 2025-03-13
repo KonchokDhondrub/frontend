@@ -12,4 +12,5 @@ function loadFile(url, containerId) {
 document.addEventListener("DOMContentLoaded", () => {
   loadFile("src/lessonsList.html", "lessons-list-container");
   loadFile("src/homeworkList.html", "homework-list-container");
+  loadFile("src/classworkList.html", "classwork-list-container");
 });
