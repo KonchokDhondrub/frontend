@@ -1,6 +1,6 @@
 * {
   color: rgba(233, 231, 203, 0.728);
-  font-size: 20px;
+  font-size: 18px;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   /* font-weight: 900; */
 
@@ -14,8 +14,12 @@
 body {
   margin: 0;
   background: url("img/bg.jpg") center/cover no-repeat fixed;
-  position: relative;
+  /* position: relative; */
   background-color: rgb(49, 49, 49);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body::before {
@@ -30,21 +34,48 @@ body::before {
   z-index: -1;
 }
 
+main {
+  flex-grow: 1;
+}
+
 footer {
-  align-self: flex-end;
-  height: 50px;
-  background-color: #f5773c;
+  background-color: #00000038;
+  /* min-width: 1186px; */
+  /* width: 1186px; */
+  display: flex;
+  align-self: center;
+  /* border: 1px solid rgb(131, 130, 130); */
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer > div > div {
+  width: 342px;
+  height: 40px;
+  /* display: flex; */
+  color: #f5773caf;
+  padding: 0 20px;
+
+  align-content: center;
+  justify-content: space-between;
+  /* width: 100%; */
+  /* width: 382px; */
 }
 
 h1 {
   color: #f5763c;
-  font-size: 2em;
+  font-size: 33px;
   font-weight: 600;
+  margin: 10px 0 10px 0;
 }
 
-h1.header {
+header > h1 {
   font-size: 50px;
   text-align: center;
+  margin: 20px 0;
 }
 
 a {
@@ -59,13 +90,14 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .column {
-  width: 400px;
+  width: 320px;
   padding: 30px;
   padding-top: 0px;
-  border: 1px solid rgb(131, 130, 130);
+  border: 1px solid rgba(131, 130, 130, 0.825);
   text-wrap-mode: wrap;
   background-color: rgba(0, 0, 0, 0.253);
 }
@@ -74,9 +106,21 @@ a:hover {
   justify-content: space-between;
   width: 100%;
   display: flex;
-  margin-left: 10px;
+  border-bottom: 2px rgba(255, 255, 255, 0.074) solid;
+  padding-top: 6px;
 }
 
 .date {
   margin-left: 10px;
+  /* align-content: end; */
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
 }
