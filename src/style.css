@@ -59,7 +59,6 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
-
 }
 
 .column {
@@ -68,7 +67,7 @@ a:hover {
   padding-top: 0px;
   border: 1px solid rgb(131, 130, 130);
   text-wrap-mode: wrap;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.253);
 }
 
 .row {
