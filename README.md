@@ -1,4 +1,4 @@
-<a href="https://konchokdhondrub.github.io/frontend/" target="_blank" rel="noopener noreferrer">Ссылка на страницу</a>
+<a href="https://konchokdhondrub.github.io/frontend/" target="_blank" rel="noreferrer">Ссылка на страницу</a>
 
 Github push cmd:
 
