@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  color: white;
+  padding: 25px 30px;
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 30px;
+}
+
+.green {
+  background-color: #778d45;
+}
+
+.light-green {
+  background-color: #aec09a;
+}
+.light-green:hover {
+  cursor: pointer;
+  color: rgb(56, 56, 56);
+}
