@@ -74,4 +74,9 @@ a:hover {
   justify-content: space-between;
   width: 100%;
   display: flex;
+  margin-left: 10px;
+}
+
+.date {
+  margin-left: 10px;
 }
