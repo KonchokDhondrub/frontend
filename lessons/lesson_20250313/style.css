@@ -1,0 +1,20 @@
+body {
+    font-size: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+li::before {
+  content: "⚡️";
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  color: rgb(180, 3, 3);
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
