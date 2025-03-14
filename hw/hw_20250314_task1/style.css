@@ -3,8 +3,9 @@ body {
 }
 
 header {
-  height: 115px;
+  height: 105px;
   padding: 0 50px;
+  padding-bottom: 8px;
   background-color: aquamarine;
 
   display: flex;
