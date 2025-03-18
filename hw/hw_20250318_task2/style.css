@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 105px;
+  padding: 0 50px;
+  padding-bottom: 8px;
+  background-color: white;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.header-underline {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  position: sticky;
+  top: 113px;
+  z-index: 1;
+}
+
+header > nav {
+  display: flex;
+  gap: 45px;
+  justify-content: space-between;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav img {
+  padding-right: 6px;
+}
+
+header a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255);
+  text-decoration: none;
+  text-wrap: nowrap;
+
+  display: flex;
+  align-items: center;
+}
+
+header a,
+input {
+  opacity: 0.7;
+}
+
+header a:hover,
+header input:hover,
+.img-logo {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+header a,
+input {
+  z-index: 1;
+}
+
+header input {
+  border-radius: 5px;
+  width: 230px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 5px;
+  border: none;
+}
+
+header .img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+header .img-logo {
+  height: 45px;
+}
+
+header .img-play {
+  width: 24px;
+  height: 34px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main .list {
+  width: 1000px;
+  margin: 10px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+main .container {
+  position: relative;
+  margin: 0;
+}
+
+main .banner {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+main img {
+  height: 600px;
+}
+
+.rating_positive {
+  background-color: rgb(59, 179, 58);
+}
+
+.rating_negative {
+  background-color: rgb(255, 0, 0);
+}
+
+.rating_negative,
+.rating_positive {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+
+  padding: 10px 10px;
+
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+main .button {
+  background-color: rgb(255, 102, 0);
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+
+  padding: 10px 10px;
+
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+main a {
+  opacity: 0.7;
+}
+
+main a:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+main a:not(:hover) {
+  transition: opacity 0.5s ease;
+}
+
+main .button:hover {
+  font-size: 30px;
+  transition: font-size 0.3s ease;
+}
+
+main .button:not(:hover) {
+  transition: font-size 0.6s ease;
+}
