@@ -20,7 +20,6 @@ header > nav {
   display: flex;
   gap: 45px;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 
 header div {
@@ -29,23 +28,40 @@ header div {
   justify-content: center;
 }
 
-img {
-  padding-right: 5px;
+header img {
+  padding-right: 6px;
 }
 
-a {
+header a {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255);
   text-decoration: none;
   text-wrap: nowrap;
 
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
+header a,
 input {
+  opacity: 0.7;
+}
+
+header a:hover,
+header input:hover,
+.img-logo {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+header a,
+input {
+  z-index: 1;
+}
+
+header input {
   border-radius: 5px;
   width: 230px;
   height: 32px;
@@ -55,22 +71,23 @@ input {
   border: none;
 }
 
-.banner {
+.img-banner {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 }
 
-.opacity {
-  opacity: 0.7;
-}
-
-.logo {
+.img-logo {
   height: 45px;
-  z-index: 1;
+}
+
+.img-play {
+  width: 24px;
+  height: 34px;
 }
 
 main {
