@@ -1,0 +1,106 @@
+body {
+  padding: 20px;
+  font-size: 18px;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.main-container {
+  width: 80%;
+}
+
+.container-grid {
+  display: grid;
+  gap: 5px;
+
+  /* grid-template-columns: 30% 50px 40% 150px; */
+  /* grid-template-columns: 0fr 3fr 1fr; /* Фреймы */
+  grid-template-columns: repeat(4, 1fr); /* ПОвторение фреймов */
+
+  /* Указываем высоту всех строк */
+  grid-auto-rows: 80px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.container-grid-min-max {
+  gap: 5px;
+  display: grid;
+
+  grid-auto-rows: 80px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid-item-adaptive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 172, 255);
+}
+
+.grid-item-pic {
+  color: white;
+  background-image: url("https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container-grid-area {
+  width: 80%;
+  height: 600px;
+  gap: 5px;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "content content sun"
+    "content content planet"
+    "footer footer footer";
+  grid-template-columns: 80% 10% 10%;
+  grid-template-columns: 0fr 1fr 3fr;
+}
+
+.header {
+  background-color: rgb(160, 160, 255);
+  grid-area: header;
+}
+
+.content {
+  background-color: rgb(255, 222, 160);
+  grid-area: content;
+  min-width: 200px;
+}
+
+.footer {
+  background-color: rgb(184, 253, 255);
+  grid-area: footer;
+}
+
+.header,
+.content,
+.footer,
+.planet,
+.sun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet {
+  background-color: rgb(255, 255, 153);
+  grid-area: planet;
+}
+
+.sun {
+  background-image: url("https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  grid-area: sun;
+}
