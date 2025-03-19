@@ -8,12 +8,13 @@ header {
   width: 100%;
 
   padding: 19px 0 0 0;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
 
   position: fixed;
-  justify-items: center;
-  align-content: end;
 
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-content: end;
 }
 
 .logo {
@@ -28,7 +29,8 @@ header {
 
 main {
   padding: 89px 20px 20px 20px;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 img {
