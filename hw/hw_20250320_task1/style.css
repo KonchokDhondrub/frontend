@@ -58,6 +58,8 @@ img {
   margin-bottom: 30px;
   gap: 15px;
 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
   align-self: start;
 }
 
@@ -169,7 +171,6 @@ footer a:hover {
 @media (min-width: 768px) and (max-width: 1024px) {
   .gallery {
     width: 90%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -182,18 +183,18 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-body {
-  background-color: #58613746;
-}
+  body {
+    background-color: #58613746;
+  }
 
-.character-card {
-  background-color: #b7ce63;;
-}
+  .character-card {
+    background-color: #b7ce63;
+  }
 
-.character-card > h3 {
-  margin: 0 0 8px;
-  font-size: 30px;
-}
+  .character-card > h3 {
+    margin: 0 0 8px;
+    font-size: 30px;
+  }
   .character-card > p {
     font-size: 26px;
   }
