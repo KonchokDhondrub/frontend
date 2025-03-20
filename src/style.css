@@ -45,7 +45,7 @@ h1 {
   font-weight: 600;
   margin: 10px 0 10px 0;
 
-  transition: font-size 1s linear;
+  transition: font-size 0.5s linear;
 }
 
 header > h1 {
@@ -107,7 +107,7 @@ footer > div {
   max-width: 800px;
   width: 100%;
 
-  transition: max-width 1s linear;
+  transition: max-width 0.5s linear;
 }
 
 footer > div > div {
@@ -117,13 +117,6 @@ footer > div > div {
 
   align-content: center;
 }
-
-/* @media (max-width: 1024px) {
-  footer > div {
-    width: 100%;
-    transition: max-width 2s linear;
-  }
-} */
 
 @media (max-width: 768px) {
   h1 {
