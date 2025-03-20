@@ -11,10 +11,15 @@
   font-variation-settings: "wdth" 100;
 }
 
+@media (max-width: 430px) {
+  * {
+    font-size: 22px;
+  }
+}
+
 body {
   margin: 0;
   background: url("img/bg.jpg") center/cover no-repeat fixed;
-  /* position: relative; */
   background-color: rgb(49, 49, 49);
 
   display: flex;
@@ -74,8 +79,7 @@ a:hover {
 
 .column {
   width: 320px;
-  padding: 30px;
-  padding-top: 0px;
+  padding: 0 30px 30px;
   border: 1px solid rgba(131, 130, 130, 0.825);
   text-wrap-mode: wrap;
   background-color: rgba(0, 0, 0, 0.253);
