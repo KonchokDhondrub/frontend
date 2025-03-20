@@ -1,0 +1,213 @@
+:root {
+  --mobile-width: 768px;
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #dcf389;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #fe6832;
+  width: 100%;
+
+  padding: 19px 0 0 0;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-content: end;
+
+  z-index: 10000;
+}
+
+.logo {
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.866);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+  padding-bottom: 15px;
+}
+
+main {
+  padding: 89px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+img {
+  width: 100%;
+}
+
+.gallery {
+  width: 80%;
+  display: grid;
+  margin-bottom: 30px;
+  gap: 15px;
+
+  align-self: start;
+}
+
+.character-card {
+  border: 1px #a3b857ab solid;
+  border-radius: 8px;
+  text-align: center;
+  padding: 14px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+
+  transition: background-color 1s ease;
+}
+
+.character-card > img {
+  border-radius: 10px;
+}
+
+.character-card > a {
+  color: #293241c1;
+  transition: color 0.5s ease;
+}
+.character-card > a:hover {
+  color: #293241;
+}
+
+.info {
+  font-size: 22px;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+.character-card:hover {
+  background-color: #b7ce63;
+}
+
+.character-card > h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.character-card > p {
+  font-size: 18px;
+  text-align: left;
+  margin: 5px;
+}
+
+footer {
+  background-color: #293241;
+  height: 50px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  padding: 0 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.57);
+  transition: color 0.5s ease;
+}
+
+footer a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.icon {
+  font-size: 24px;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0 10px 5px;
+    height: 50px;
+  }
+  footer > div {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .icon {
+    margin: 0 0 0 15px;
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer > div {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .icon {
+    margin: 0 0 0 10px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 36px;
+    transition: font-size 0.5s linear;
+  }
+}
+
+@media (max-width: 768px) {
+body {
+  background-color: #58613746;
+}
+
+.character-card {
+  background-color: #b7ce63;;
+}
+
+.character-card > h3 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+  .character-card > p {
+    font-size: 26px;
+  }
+  .gallery {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    font-size: 26px;
+    transition: font-size 0.5s linear;
+  }
+  .info {
+    font-size: 50px;
+    right: 30px;
+    top: 70px;
+  }
+}
