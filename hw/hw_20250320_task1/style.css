@@ -39,13 +39,18 @@ header {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 
   padding-bottom: 15px;
+
+  transition: font-size 0.5s linear;
 }
 
 main {
-  padding: 89px 20px 20px 20px;
+  padding: 100px 20px 0 20px;
+
   display: flex;
   justify-content: center;
   flex: 1;
+
+  transition: padding 0.5s linear;
 }
 
 img {
@@ -54,11 +59,12 @@ img {
 
 .gallery {
   width: 80%;
-  display: grid;
   margin-bottom: 30px;
-  gap: 15px;
 
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 15px;
 
   align-self: start;
 }
@@ -138,7 +144,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   footer {
-    padding: 0 10px 5px;
+    padding: 0 20px 5px;
     height: 50px;
   }
   footer > div {
@@ -164,27 +170,29 @@ footer a:hover {
 
 @media (min-width: 1024px) {
   .gallery {
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .gallery {
     width: 90%;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .logo {
-    font-size: 36px;
-    transition: font-size 0.5s linear;
+    /* grid-template-columns: repeat(3, 1fr); */
   }
 }
 
 @media (max-width: 768px) {
+  .gallery {
+    width: 100%;
+    /* grid-template-columns: 1fr; */
+  }
+
   body {
     background-color: #58613746;
+  }
+
+  main {
+    padding: 85px 15px 0 15px;
   }
 
   .character-card {
@@ -195,17 +203,15 @@ footer a:hover {
     margin: 0 0 8px;
     font-size: 30px;
   }
+
   .character-card > p {
     font-size: 26px;
   }
-  .gallery {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
+
   .logo {
     font-size: 26px;
-    transition: font-size 0.5s linear;
   }
+
   .info {
     font-size: 50px;
     right: 30px;
