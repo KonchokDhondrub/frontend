@@ -157,7 +157,7 @@ a {
 
 .welcome-img > h1 {
   position: absolute;
-
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.895);
   color: white;
   font-size: 41px;
   font-weight: 700px;
