@@ -29,8 +29,13 @@ btn.addEventListener("click", () => {
 });
 
 clonedBtn.addEventListener("click", () => {
-  btn.style.backgroundColor = "#9c4a1a";
-  btn.style.color = "black";
+  if (btn.style.backgroundColor === "rgb(156, 74, 26)") {
+    btn.style.backgroundColor = "";
+    btn.style.color = "";
+  } else {
+    btn.style.backgroundColor = "rgb(156, 74, 26)";
+    btn.style.color = "black";
+  }
 });
 
 console.dir(document);
