@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lesson 24.03.2025 - JS Dom Methods</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="heading">Lesson 9: DOM methods ✴️</h1>
+      <p class="desc-info">DOM - Document Object Model</p>
+      <p class="desc-info">Все элементы на странице можно представить ввиде глобального объекта Document</p>
+      <p>Чтобы надодить элементы в DOM им нужен id или class</p>
+      <h2>Методы поиска элементов:</h2>
+      <ul>
+        <li>По id: <span>document.geElement.DyId("id")</span></li>
+        <li>По class: <span>document.getElementsByClassName("class")</span></li>
+        <li>По тэгу: <span>document.getElementsByTagName("el")</span></li>
+      </ul>
+      <div>
+        <button class="bttn" id="bttn-change-h1">Change heading color</button>
+
+        <button class="bttn" id="bttn-create">Create new element</button>
+      </div>
+    </header>
+  </body>
+</html>

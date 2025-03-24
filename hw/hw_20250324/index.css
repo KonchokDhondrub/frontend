@@ -1,0 +1,31 @@
+#magic-btn {
+  background-color: #f7c815;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
+
+#magic-btn:hover {
+  color: black;
+}
+
+.second-btn {
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  background-color: rgb(143, 179, 80);
+}
+
+.second-btn:hover {
+  color: white;
+}
+
+#text {
+  font-size: 30px;
+  margin: 20px;
+}

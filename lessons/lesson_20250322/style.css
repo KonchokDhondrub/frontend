@@ -1,0 +1,39 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10px 30px;
+}
+
+li > span {
+  font-weight: bold;
+}
+
+.bttn {
+  border: none;
+  padding: 15px;
+  color: lightgray;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.bttn:hover {
+  color: white;
+  /* box-shadow: inset 0 0 1px 2px rgba(62, 62, 62, 0.474); */
+}
+
+#bttn-change-h1 {
+  background-color: rgb(148, 81, 177);
+}
+
+#bttn-create {
+  background-color: rgb(238, 146, 42);
+}
+
+.dom-text {
+  color: darkslateblue;
+  text-decoration: underline;
+}
