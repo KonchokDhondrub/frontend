@@ -29,4 +29,3 @@ let myNumber2 = document.createElement("p");
 myNumber2.innerText = String("4. ") + parseInt("123smth");
 document.body.append(myNumber2);
 
-console.log("Что ты тут ищешь?");

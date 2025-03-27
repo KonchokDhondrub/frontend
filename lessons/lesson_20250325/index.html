@@ -13,5 +13,15 @@
       <h1 id="heading">Lesson 10: JS Intro ✴️</h1>
       <p>Самое интересное на этом уроке происходит в javascript коде и консоли браузера</p>
     </header>
+    <pre id="codeBlock"></pre>
+
+  <script>
+    fetch('script.js')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('codeBlock').textContent = text;
+      })
+      .catch(error => console.error('Error loading script.js:', error));
+  </script>
   </body>
 </html>

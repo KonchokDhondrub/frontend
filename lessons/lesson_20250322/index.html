@@ -24,6 +24,16 @@
         <button class="bttn" id="bttn-change-h1">Change heading color</button>
 
         <button class="bttn" id="bttn-create">Create new element</button>
+        <p><pre id="codeBlock"></pre>
+
+          <script>
+            fetch('script.js')
+              .then(response => response.text())
+              .then(text => {
+                document.getElementById('codeBlock').textContent = text;
+              })
+              .catch(error => console.error('Error loading script.js:', error));
+          </script></p>
       </div>
     </header>
   </body>

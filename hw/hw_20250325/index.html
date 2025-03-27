@@ -7,9 +7,15 @@
     <title>HW</title>
   </head>
   <body>
-    <!-- <p>
-      Задание 1 <br />1. Создайте переменную myNumber и присвойте ей результат выражения: деление числа 100 на остаток от деления 25 на 3. <br />Выведите значение myNumber в консоль. <br /><br />2. Создайте переменную myString и присвойте ей значение, <br />которое является результатом конкатенации следующих строк: "Hello, ", "world", "!", и числа 2024. <br />Выведите значение myString в консоль. <br /><br />3. Создайте переменную isHuman и присвойте ей результат сравнения числа 42 со строкой 42. <br />Результатом должно стать true. <br />Подумайте какой оператор сравнения вы будете использовать. <br /><br />4. Создайте переменную myNumber и присвойте ей результат преобразования строки "123smth" в число. <br />Выведите значение myNumber в консоль. <br /><br />
-      выведите результат заданий на странице в HTML элементах
-    </p> -->
+    <pre id="codeBlock"></pre>
+
+  <script>
+    fetch('script.js')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('codeBlock').textContent = text;
+      })
+      .catch(error => console.error('Error loading script.js:', error));
+  </script>
   </body>
 </html>

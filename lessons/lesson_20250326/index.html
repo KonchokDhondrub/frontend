@@ -11,7 +11,16 @@
   <body>
     <header>
       <h1 id="heading">Lesson 11: JS Arrays ✴️</h1>
-      <p></p>
+      <pre id="codeBlock"></pre>
+
+  <script>
+    fetch('script.js')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('codeBlock').textContent = text;
+      })
+      .catch(error => console.error('Error loading script.js:', error));
+  </script>
     </header>
   </body>
 </html>

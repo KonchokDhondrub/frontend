@@ -9,5 +9,16 @@
   <body>
     <p id="text">Волшебные кнопки</p>
     <button id="magic-btn">Нажми на меня</button>
+
+    <pre id="codeBlock"></pre>
+
+    <script>
+      fetch("index.js")
+        .then((response) => response.text())
+        .then((text) => {
+          document.getElementById("codeBlock").textContent = text;
+        })
+        .catch((error) => console.error("Error loading script.js:", error));
+    </script>
   </body>
 </html>

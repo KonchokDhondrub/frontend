@@ -6,5 +6,16 @@
     <link rel="stylesheet" href="style.css" />
     <title>HW 26.03.2025</title>
   </head>
-  <body></body>
+  <body>
+    <pre id="codeBlock"></pre>
+
+  <script>
+    fetch('script.js')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('codeBlock').textContent = text;
+      })
+      .catch(error => console.error('Error loading script.js:', error));
+  </script>
+  </body>
 </html>
