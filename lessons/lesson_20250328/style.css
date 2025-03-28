@@ -14,6 +14,10 @@ header {
   align-items: center;
 }
 
+.todo {
+  margin-top: 50px;
+}
+
 .line {
   width: 100%;
   height: 2px;
@@ -24,7 +28,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 #value {
