@@ -1,0 +1,19 @@
+* {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0 30px;
+}
+h3 {
+  margin: 25px 0 0;
+}
+
+ul {
+  margin: 5px;
+}
+
+p {
+  margin: 5px 0;
+}

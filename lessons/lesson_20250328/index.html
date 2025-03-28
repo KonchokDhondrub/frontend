@@ -9,14 +9,30 @@
     <title>Lesson 28.03.2025 - DOM Practice</title>
   </head>
   <body>
-    <h1 id="heading">Lesson 13: DOM Practice✴️</h1>
-    <header id="header">
-      <h2 class="counter">Counter</h2>
-      <button class="btn" id="btn-plus">minus</button>
-      <span id="value">0</span>
-      <button class="btn" id="btn-minux">plus</button>
+    <header>
+      <h1>Lesson 13: DOM Practice ✴️</h1>
+      <div class="line"></div>
     </header>
-    <main>
+    <main class="display">
+      <!-- Counter -->
+      <h2 class="counter">Counter:</h2>
+      <span id="value">0</span>
+      <div>
+        <button class="btn" id="btn-minus">minus</button>
+        <button class="btn" id="btn-plus">plus</button>
+      </div>
+
+      <!-- ToDo List -->
+      <h2 class="todo">ToDo List:</h2>
+      <div class="content">
+        <form id="form-todo">
+          <input name="what" type="text" placeholder="what to do" required />
+          <input name="where" type="text" placeholder="where to do" required />
+          <button class="btn-todo" type="submit">add task</button>
+        </form>
+        <ul id="list-todo"></ul>
+      </div>
+
       <!-- <pre id="codeBlock"></pre>
 
       <script>
