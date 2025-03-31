@@ -40,6 +40,7 @@ function clearList() {
   }
 }
 
+li.onclick = changeStatus;
 const changeStatus = (event) => {
   if (event.target.style.textDecoration === "line-through") {
     event.target.style.textDecoration = "none";
