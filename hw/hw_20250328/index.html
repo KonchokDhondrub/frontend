@@ -2,10 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="script.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
     <link rel="stylesheet" href="style.css" />
-    <title>HW 28.03.2025</title>
-    <h2>HW 28.03.2025</h2>
+    <title>Lesson 28.03.2025 - DOM Practice</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>HW 28.03.2025: Favorite books 📚</h1>
+      <div class="line"></div>
+    </header>
+    <main class="display">
+      <h2 class="h2">My books:</h2>
+      <div class="content">
+        <form id="form-fav-books">
+          <input class="book" name="book" type="text" placeholder="book name" required />
+          <input class="author" name="author" type="text" placeholder="author" required />
+          <button class="btn-add" type="submit">add</button><br />
+        </form>
+        <ul id="list-fav-books"></ul>
+        <button class="btn-clear" id="btn-clear" type="clear">remove all books</button>
+      </div>
+      <br /><br />
+      <div class="line"></div>
+      <pre id="codeBlock"></pre>
+
+      <script>
+        fetch("script.js")
+          .then((response) => response.text())
+          .then((text) => {
+            document.getElementById("codeBlock").textContent = text;
+          })
+          .catch((error) => console.error("Error loading script.js:", error));
+      </script>
+    </main>
+  </body>
 </html>
