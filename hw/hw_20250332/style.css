@@ -11,6 +11,13 @@ main {
   font-size: 20px;
 }
 
+#codeBlock {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(0, 235, 0);
+}
+
 img {
   width: 300px;
 }
@@ -32,4 +39,7 @@ img {
 
   font-weight: bold;
   font-size: 20px;
+
+  width: 300px;
+  border-radius: 5px;
 }

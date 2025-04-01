@@ -2,7 +2,16 @@ let imgContainer;
 const refreshBtn = document.getElementById("btn-refresh");
 const main = document.querySelector("main");
 
+createImageContainer();
+foxes();
+
+const container = setInterval(() => {
+  clearImages();
+  foxes();
+}, 8000);
+
 refreshBtn.addEventListener("click", () => {
+  clearInterval(container);
   clearImages();
   foxes();
 });
@@ -35,10 +44,3 @@ function foxes() {
       console.log(error);
     });
 }
-
-createImageContainer();
-foxes();
-setInterval(() => {
-  clearImages();
-  foxes();
-}, 10000);
