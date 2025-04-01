@@ -1,0 +1,35 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10px 30px;
+}
+
+main {
+  font-size: 20px;
+}
+
+img {
+  width: 300px;
+}
+
+.line,
+.bottom-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(92, 145, 244);
+}
+
+.bottom-line {
+  margin-top: 20px;
+}
+
+#btn-refresh {
+  margin-bottom: 30px;
+  padding: 10px;
+
+  font-weight: bold;
+  font-size: 20px;
+}
