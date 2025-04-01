@@ -1,5 +1,6 @@
 const form = document.getElementById("movie-form");
 const clearBtn = document.getElementById("btn-clear");
+
 clearBtn.addEventListener("click", () => {
   movieList.length = 0;
   clearList();
@@ -49,19 +50,43 @@ function createList(list) {
   list.forEach((el, index) => {
     const container = document.createElement("div");
     container.className = "flexgrid--3";
-    container.innerHTML = `<article class="modul-teaser">
-      <div class="image">
-        <a href="#"><img src="${el.img}" alt="${el.name}" /></a>
-        <div class="pointer">
-          <i onclick="remove(${index})" class="fa-solid fa-trash"></i>
-        </div>
-      </div>
-      <h3 class="title"><a href="#">${el.name}</a></h3>
-      <div class="inner">
+
+    const article = document.createElement("article");
+    article.className = "modul-teaser";
+
+    const divImage = document.createElement("div");
+    divImage.className = "image";
+
+    const link = document.createElement("a");
+    link.href = "#";
+
+    const image = document.createElement("img");
+    image.src = el.img;
+    image.alt = el.name;
+
+    const divPointer = document.createElement("div");
+    divPointer.className = "pointer";
+
+    const delBtn = document.createElement("i");
+    delBtn.onclick = () => remove(index);
+    delBtn.className = "fa-solid fa-trash";
+
+    const h3 = document.createElement("h3");
+    h3.className = "title";
+
+    const innerDiv = document.createElement("div");
+    innerDiv.className = "inner";
+    innerDiv.innerHTML = `
         <p class="year">${el.year}</p>
-        <p class="text">${el.author}</p>
-      </div>
-    </article>`;
+        <p class="text">${el.author}</p>`;
+
+    link.append(image);
+    h3.append(link);
+    divImage.append(link);
+    divPointer.append(delBtn);
+    divImage.append(divPointer);
+    article.append(divImage, h3, innerDiv);
+    container.append(article);
     parent.append(container);
   });
 }

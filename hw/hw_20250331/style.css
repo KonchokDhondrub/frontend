@@ -59,9 +59,9 @@ main {
 
 .image {
   position: relative;
-  width: 100%;
-  /* height: auto; */
-  border: 1px rgba(0, 0, 0, 0.264) solid;
+  /* width: 100%; */
+  height: auto;
+  /* border: 1px rgba(0, 0, 0, 0.264) solid; */
 }
 
 .year {
@@ -125,7 +125,7 @@ form > input {
   font-weight: bold;
 
   padding: 10px;
-  /* margin: 0 10px; */
+  margin: 0 15px;
 
   background-color: cornflowerblue;
   border: none;
