@@ -1,6 +1,7 @@
-let imgContainer;
+let imgContainer = document.createElement("div");
 const refreshBtn = document.getElementById("btn-refresh");
 const main = document.querySelector("main");
+const img = document.createElement("img");
 
 createImageContainer();
 foxes();
@@ -17,13 +18,12 @@ refreshBtn.addEventListener("click", () => {
 });
 
 function createImageContainer() {
-  imgContainer = document.createElement("div");
   main.appendChild(imgContainer);
 }
 
 function clearImages() {
-  if (imgContainer) {
-    imgContainer.innerHTML = "";
+  if (img) {
+    img.src = "";
   }
 }
 
@@ -36,7 +36,6 @@ function foxes() {
       return res.json();
     })
     .then((data) => {
-      const img = document.createElement("img");
       img.src = data.image;
       imgContainer.appendChild(img);
     })
