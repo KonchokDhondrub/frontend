@@ -1,14 +1,21 @@
 const main = document.querySelector("main");
 const form = document.getElementById("form");
+let requestCount = 0;
+const maxRequests = 5;
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const name = event.target.name.value;
-
   getCharacters(name);
 });
 
 async function getCharacters(name) {
+  if (requestCount >= maxRequests) {
+    alert("Достигнут лимит запросов!");
+    return;
+  }
+  requestCount++;
+
   const res = await fetch(`https://api.genderize.io/?name=${name}`);
   const data = await res.json();
 
