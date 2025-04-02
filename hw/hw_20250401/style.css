@@ -39,6 +39,11 @@ img {
   background-color: rgb(92, 145, 244);
 }
 
+.line,
+.bottom-line {
+  margin-bottom: 20px;
+}
+
 .bottom-line {
   margin-top: 20px;
 }
