@@ -1,0 +1,35 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10px 30px;
+}
+
+main {
+  font-size: 20px;
+}
+
+#codeBlock {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(0, 235, 0);
+}
+
+.line,
+.bottom-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(92, 145, 244);
+}
+
+.line,
+.bottom-line {
+  margin-bottom: 20px;
+}
+
+.bottom-line {
+  margin-top: 20px;
+}
