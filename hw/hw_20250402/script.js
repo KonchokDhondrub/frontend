@@ -25,23 +25,23 @@ async function getCharacters(name) {
   h2.textContent = `Name: ${data.name}`;
   box.append(h2);
 
-  const p = document.createElement("p");
-  p.textContent = `Count: ${count}`;
-  box.append(p);
+  const p1 = document.createElement("p");
+  p1.textContent = `Count: ${data.count}`;
+  box.append(p1);
 
-  const p1 = document.createElement("p1");
+  const p2 = document.createElement("p");
   p2.textContent = `Gender: ${data.gender} ${getIconGender(data)}`;
-  box.append(p);
+  box.append(p2);
 
-  const p2 = document.createElement("p2");
-  p.textContent = `Probability: ${probability * 100}%`;
-  box.append(p);
+  const p3 = document.createElement("p");
+  p3.textContent = `Probability: ${data.probability * 100}%`;
+  box.append(p3);
 
   main.append(box);
 }
 
 function getIconGender(data) {
-  return data.gender === "male" ? "👨" : "👩";
+  return data.gender === "male" ? "👨" : data.gender === "female" ? "👩" : "❓";
 }
 
 //   count: 402427,
