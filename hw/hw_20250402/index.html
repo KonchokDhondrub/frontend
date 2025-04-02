@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="script.js"></script>
+    <script defer src="../../code-view.js"></script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
     <link rel="stylesheet" href="style.css" />
     <title>HW 02.04.2025 - Async Intro</title>
@@ -23,31 +24,6 @@
       <div class="bottom-line"></div>
       <button id="toggleCode"><span id="arrow">▶</span> Показать код</button>
       <pre id="codeBlock" style="display: none"></pre>
-
-      <script>
-        document.getElementById("toggleCode").addEventListener("click", function () {
-          const codeBlock = document.getElementById("codeBlock");
-          const arrow = document.getElementById("arrow");
-
-          if (codeBlock.style.display === "none") {
-            fetch("script.js")
-              .then((response) => response.text())
-              .then((text) => {
-                codeBlock.textContent = text;
-                codeBlock.style.display = "block";
-                arrow.textContent = "▼";
-                this.textContent = " Скрыть код";
-                this.prepend(arrow);
-              })
-              .catch((error) => console.error("Ошибка загрузки script.js:", error));
-          } else {
-            codeBlock.style.display = "none";
-            arrow.textContent = "▶";
-            this.textContent = " Показать код";
-            this.prepend(arrow);
-          }
-        });
-      </script>
     </footer>
   </body>
 </html>
