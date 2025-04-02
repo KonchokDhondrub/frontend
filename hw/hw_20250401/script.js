@@ -1,37 +1,27 @@
 let imgContainer = document.createElement("div");
+imgContainer.className = "fox-wrapper";
 const refreshBtn = document.getElementById("btn-refresh");
 const main = document.querySelector("main");
 const img = document.createElement("img");
 
 createImageContainer();
-foxes();
+getdata();
 
 const container = setInterval(() => {
-  clearImages();
-  foxes();
+  getdata();
 }, 8000);
 
-refreshBtn.addEventListener("click", () => {
-  clearInterval(container);
-  clearImages();
-  foxes();
-});
+refreshBtn.addEventListener("click", getdata);
 
 function createImageContainer() {
   main.appendChild(imgContainer);
 }
 
-function clearImages() {
-  if (img) {
-    img.src = "";
-  }
-}
-
-function foxes() {
+function getdata() {
   fetch("https://randomfox.ca/floof/")
     .then((res) => {
       if (!res.ok) {
-        throw new Error(`Ошибка: ${res.status}`);
+        throw new Error(`Ошибка: ${res.status} ${res.statusText}`);
       }
       return res.json();
     })
@@ -40,6 +30,7 @@ function foxes() {
       imgContainer.appendChild(img);
     })
     .catch((error) => {
-      console.log(error);
+      console.error("Ошибка в запросе: " + error.message);
+      clearInterval(container);
     });
 }
