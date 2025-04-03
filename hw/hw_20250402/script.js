@@ -41,7 +41,7 @@ async function getCharacters(name) {
   box.append(p2);
 
   const p3 = document.createElement("p");
-  p3.textContent = `Probability: ${data.probability * 100}%`;
+  p3.textContent = `Probability: ${data.probability}`;
   box.append(p3);
 
   main.append(box);
