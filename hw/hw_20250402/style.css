@@ -11,13 +11,6 @@ main {
   font-size: 20px;
 }
 
-#codeBlock {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 20px;
-  font-family: "Courier New", Courier, monospace;
-  color: rgb(0, 235, 0);
-}
-
 .line,
 .bottom-line {
   width: 100%;

@@ -1,0 +1,145 @@
+/* * {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 80;
+  position: sticky;
+  top: 0;
+
+  padding: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+
+  background-color: #e3655b;
+}
+
+main {
+  flex: 1;
+  padding: 20px 30px;
+  /* font-size: 20px; */
+}
+
+main > div button {
+  font-size: 30px;
+  background: #9c9f4e;
+  color: white;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+main > div button:hover {
+  background-color: #cfd186;
+}
+
+footer {
+  padding: 10px 30px;
+
+  background-color: #cfd186;
+}
+
+.line,
+.bottom-line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(92, 145, 244);
+}
+
+/* ! lesson */
+
+* {
+  box-sizing: border-box;
+  font-family: "Short Stack", cursive;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+}
+
+.grid-container > section {
+  border: 2px solid #cfd186;
+  padding: 20px;
+  border-radius: 5px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: end; */
+}
+
+.grid-container img {
+  width: 100%;
+}
+
+.grid-container h3 {
+  margin-top: 0;
+}
+
+.form-container,
+#form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+#form > input {
+  height: 40px;
+  width: 55px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.7s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.hide {
+  display: none;
+  /* visibility: hidden; */
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.a-lot {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 0.7s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
