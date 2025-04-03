@@ -4,7 +4,7 @@ let requestCount = 0;
 const maxRequests = 5;
 
 form.addEventListener("submit", (event) => {
-  // event.preventDefault();
+  event.preventDefault();
   const name = event.target.name.value;
   getCharacters(name);
 });
