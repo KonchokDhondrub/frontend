@@ -86,6 +86,7 @@ function showCustomAlert(message) {
   alertBox.style.transform = "translateX(-50%)";
   alertBox.style.background = "rgb(221, 7, 7)";
   alertBox.style.color = "#fff";
+  alertBox.style.fontSize = "20px";
   alertBox.style.fontWeight = "bold";
   alertBox.style.padding = "20px 40px";
   alertBox.style.borderRadius = "5px";
