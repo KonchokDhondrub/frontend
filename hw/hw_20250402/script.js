@@ -1,11 +1,13 @@
 const main = document.querySelector("main");
 const form = document.getElementById("form");
+const box = document.createElement("div");
 let requestCount = 0;
 const maxRequests = 5;
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const name = event.target.name.value;
+  box.innerHTML = "";
   getCharacters(name);
 });
 
@@ -25,8 +27,6 @@ async function getCharacters(name) {
     console.error(data.error);
     return;
   }
-
-  const box = document.createElement("div");
 
   const h2 = document.createElement("h2");
   h2.textContent = `Name: ${data.name}`;
