@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <script defer src="../../code-view.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛩️</text></svg>" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Beauty & Tech - Online shop</title>
+  </head>
+  <body>
+    <header>
+      <h1>Beauty & Tech</h1>
+      <nav class="nav-header">
+        <a href="../lesson_20250403/">to Wear & Carry</a>
+        <a href="#">Delivery</a>
+        <a href="#">Search</a>
+        <a href="#">FAQ</a>
+        <a href="#">Sing In</a>
+      </nav>
+      <nav class="nav-burger">
+        <span id="burger-menu-btn">☰</span>
+        <div class="burger-menu hide">
+          <div><a href="../lesson_20250403/">to Wear & Carry</a></div>
+          <div><a href="#">Delivery</a></div>
+          <div><a href="#">Search</a></div>
+          <div><a href="#">FAQ</a></div>
+          <div><a href="#">Sing In</a></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="top-menu">
+        <div class="form-container">
+          <form id="form">
+            <input type="number" placeholder="№" name="amount" required />
+            <button class="btn" type="submit">view</button>
+          </form>
+          <button id="btn-reset">all</button>
+        </div>
+        <div class="cart"><span id="cart-count"></span> 🛒</div>
+      </div>
+
+      <div class="grid-container" id="grid-container"></div>
+    </main>
+    <div class="loader"></div>
+    <div class="bottom-line"></div>
+    <footer>
+      <span>Copyright and All Rights Reserved</span>
+      <span><a href="#">email@mail.com</a></span>
+      <!-- <div id="code"></div> -->
+    </footer>
+  </body>
+</html>
