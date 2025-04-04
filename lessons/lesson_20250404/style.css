@@ -175,13 +175,13 @@ main form input {
 .grid-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .grid-container > section {
-  border: 2px solid #f0f4ef;
-  box-shadow: 0 0 3px #f0f4ef;
+  border: 1px solid #b5b7b5;
+  box-shadow: 0 0 3px #cbccca;
   padding: 10px;
   border-radius: 5px;
 
