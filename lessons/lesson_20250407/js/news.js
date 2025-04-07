@@ -19,3 +19,4 @@ const getNews = async () => {
 };
 
 getNews();
+
