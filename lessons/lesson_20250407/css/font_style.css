@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Fugaz One;
+  src: url("../fonts/FugazOne-Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: "Fugaz One", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
