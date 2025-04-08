@@ -1,12 +1,9 @@
 const loader = document.querySelector(".loader");
 const weatherContainer = document.querySelector("main");
-weatherContainer.classList.toggle("hide");
+
+weatherContainer.classList.add("hide");
 
 let userLocation = [];
-
-// setTimeout(() => {
-//   ;
-// }, 500);
 
 getLocation();
 
@@ -17,6 +14,8 @@ function getLocation() {
       return geoRes.json();
     })
     .then((locData) => {
+      console.log(locData);
+
       const locLat = locData.latitude;
       const locLon = locData.longitude;
 
@@ -28,53 +27,35 @@ function getLocation() {
 
       userLocation = [locLat, locLon];
 
-      console.log("Latitude:", locLat);
-      console.log("Longitude:", locLon);
+      //console.log("Latitude:", locLat);
+      //console.log("Longitude:", locLon);
       console.log("User location:", userLocation);
 
-      getWeather(userLocation);
-      initMap(userLocation);
+      getWeather(userLocation, locData); // Getting weather
+      initMap(userLocation); // Loading Map
     })
     .catch((error) => {
       console.error("Geolocation data not found: " + error.message);
+      loader.classList.add("hide");
     });
 }
 
-async function getWeather(userLocation) {
-  const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${userLocation[0]}&longitude=${userLocation[1]}&current_weather=true`);
-  const data = await res.json();
+async function getWeather(userLocation, locData) {
+  console.log(userLocation);
 
-  loader.classList.toggle("hide");
-  weatherContainer.classList.toggle("hide");
+  try {
+    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${userLocation[0]}&longitude=${userLocation[1]}&current_weather=true`);
+    const data = await res.json();
+    //  console.log(data);
 
-  // const currentTime = data.current_weather.time;
-  // const temperature = data.current_weather.temperature;
-  // const temperatureUnit = data.current_weather_units.temperature;
-  // const windSpeed = data.current_weather.windspeed;
-  // const windSpeedUnit = data.current_weather_units.windspeed;
-  // const windDirection = data.current_weather.winddirection;
-  // const windDirectionUnit = data.current_weather_units.winddirection;
-  // const weathercode = getWeatherDescription(data.current_weather.weathercode);
+    loader.classList.add("hide");
+    weatherContainer.classList.remove("hide");
 
-  // console.log(currentTime + " GMT +0");
-  // console.log(temperature + temperatureUnit);
-  // console.log(windSpeed + " " + windSpeedUnit);
-  // console.log(windDirection + windDirectionUnit);
-  // console.log(weathercode);
-
-  weatherData(data);
-}
-
-function weatherData(weatherData) {
-  const currentWeather = weatherData.current_weather;
-  const units = weatherData.current_weather_units;
-
-  const weatherDescription = getWeatherDescription(currentWeather.weathercode);
-  const weatherDescriptionSymbol = getWeatherDescriptionSymbol(currentWeather.weathercode);
-
-  document.querySelector(".temperature").innerText = `${currentWeather.temperature} ${units.temperature}`;
-
-  console.log(weatherData);
+    weatherData(data, locData); //!
+  } catch (error) {
+    console.error("Weather data not found: " + error.message);
+    loader.classList.add("hide");
+  }
 }
 
 function getWeatherDescription(code) {
@@ -130,11 +111,11 @@ function getWeatherDescription(code) {
     case 86:
       return "Snow showers: heavy";
     case 95:
-      return "Thunderstorm: Slight or moderate. (*) Thunderstorm forecast with hail is only available in Central Europe";
+      return "Thunderstorm: Slight or moderate";
     case 96:
       return "Thunderstorm with slight hail";
     case 99:
-      return "Thunderstorm with heavy hail. (*) Thunderstorm forecast with hail is only available in Central Europe";
+      return "Thunderstorm with heavy hail";
     default:
       return "Unknown weather conditions or invalid code";
   }
@@ -203,7 +184,46 @@ function getWeatherDescriptionSymbol(code) {
   }
 }
 
+function weatherData(weatherData, locData) {
+  const currentWeather = weatherData.current_weather;
+  const units = weatherData.current_weather_units;
+
+  const weatherDescription = getWeatherDescription(currentWeather.weathercode);
+  const weatherDescriptionSymbol = getWeatherDescriptionSymbol(currentWeather.weathercode);
+
+  console.log(weatherData);
+  //console.log(weatherDescriptionSymbol);
+
+  document.querySelector(".city-name").innerHTML = locData.city + "<br> " + locData.region;
+
+  document.querySelector(".temperature").innerText = `${currentWeather.temperature} ${units.temperature}`;
+  document.querySelector(".wind-speed").textContent = `${currentWeather.windspeed} ${units.windspeed}`;
+
+  document.querySelector(".wind-direction").innerText = currentWeather.winddirection + " " + units.winddirection;
+
+  document.querySelector(".weather-code").innerText = weatherDescription;
+
+  document.querySelector(".weather-code-icon").innerText = weatherDescriptionSymbol;
+
+  arrowRotation(currentWeather);
+
+  if (currentWeather.weathercode === 95 || currentWeather.weathercode === 99) {
+    document.querySelector(".weather-code-extra").innerText = "* Thunderstorm forecast with hail is only available in Central Europe";
+  }
+}
+
 function initMap(userLocation) {
   const map = document.querySelector(".gmap_canvas");
   map.src = `https://maps.google.com/maps?q=${userLocation[0]},${userLocation[1]}&z=10&output=embed`;
+}
+
+function arrowRotation(currentWeather) {
+  const direction = currentWeather.winddirection;
+  // console.log(currentWeather.winddirection);
+
+  const arrow = document.querySelector(".arrow-pointer");
+
+  if (arrow) {
+    arrow.style.transform = `rotate(${direction}deg)`;
+  }
 }

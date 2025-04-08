@@ -29,31 +29,7 @@
 
 https://www.google.com/maps/@36.1111111,-5.11111111,15z?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D
 
-{latitude: 52.52, longitude: 13.419998, generationtime_ms: 0.05054473876953125, utc_offset_seconds: 0, timezone: 'GMT', …}
-current_weather
-: 
-{time: '2025-04-08T08:30', interval: 900, temperature: 9.3, windspeed: 5.3, winddirection: 62, …}
-current_weather_units
-: 
-{time: 'iso8601', interval: 'seconds', temperature: '°C', windspeed: 'km/h', winddirection: '°', …}
-elevation
-: 
-38
-generationtime_ms
-: 
-0.05054473876953125
-latitude
-: 
-52.52
-longitude
-: 
-13.419998
-timezone
-: 
-"GMT"
-timezone_abbreviation
-: 
-"GMT"
-utc_offset_seconds
-: 
-0
+function arrowRotation(weatherData){
+
+  transform: rotate(45deg);
+}
