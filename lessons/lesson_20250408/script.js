@@ -4,8 +4,6 @@ weatherContainer.classList.toggle("hide");
 
 let userLocation = [];
 
-
-
 // setTimeout(() => {
 //   ;
 // }, 500);
@@ -35,6 +33,7 @@ function getLocation() {
       console.log("User location:", userLocation);
 
       getWeather(userLocation);
+      initMap(userLocation);
     })
     .catch((error) => {
       console.error("Geolocation data not found: " + error.message);
@@ -202,4 +201,9 @@ function getWeatherDescriptionSymbol(code) {
     default:
       return "❓"; // Unknown weather conditions or invalid code
   }
+}
+
+function initMap(userLocation) {
+  const map = document.querySelector(".gmap_canvas");
+  map.src = `https://maps.google.com/maps?q=${userLocation[0]},${userLocation[1]}&z=10&output=embed`;
 }

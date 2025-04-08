@@ -36,6 +36,11 @@ main {
 .weater-container {
 }
 
+.gmap_canvas {
+    width: 600px;
+  height: 300px;
+}
+
 .loader {
   width: 48px;
   height: 48px;

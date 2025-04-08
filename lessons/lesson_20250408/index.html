@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="script.js"></script>
-    <!-- <script defer src="../../code-view.js"></script> -->
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>" />
     <link rel="stylesheet" href="style.css" />
     <title>Meteorology Today</title>
@@ -25,12 +27,12 @@
           </div>
         </div>
       </div>
-      <div class="map-container">MAP</div>
+      <div id="map" class="map-container">
+        <iframe class="gmap_canvas" src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
     </main>
     <div class="loader"></div>
     <div class="bottom-line"></div>
-    <footer>
-      <!-- <div id="code"></div> -->
-    </footer>
+    <footer></footer>
   </body>
 </html>
