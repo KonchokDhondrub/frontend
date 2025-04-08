@@ -164,6 +164,7 @@ function showCustomAlert(message) {
       button (add to basket)
 */
 
+/* Burger Menu */
 const burgerMenu = document.querySelector("#burger-menu-btn");
 let isOpen = false;
 
