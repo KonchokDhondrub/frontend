@@ -25,11 +25,3 @@
    Поставить `setTimeout` на 1.5 сек, чтобы лоадер подольше крутился.
 
 7. Задеплоить на GitHub Pages.
-
-
-https://www.google.com/maps/@36.1111111,-5.11111111,15z?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D
-
-function arrowRotation(weatherData){
-
-  transform: rotate(45deg);
-}
