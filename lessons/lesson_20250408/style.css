@@ -74,11 +74,13 @@ footer {
 .gmap_canvas {
   /* width: 600px;  */
   height: 100%;
+  border-radius: 8px;
 }
 
 .city-name {
   margin-top: 0px;
 }
+
 #weather-container {
   height: 100%;
 }
