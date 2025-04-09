@@ -8,6 +8,9 @@ body {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+
+  /* background: none; */
+  /* transition: "background 1s ease-in-out" */
 }
 
 header {
@@ -19,8 +22,8 @@ header {
 }
 
 main {
-  margin: 15px;
-  height: 198px;
+  margin: 15px 10px;
+  /* height: 198px; */
   font-size: 20px;
 
   display: grid;
@@ -29,7 +32,7 @@ main {
 }
 
 footer {
-  margin: 10px;
+  margin: 5px;
 }
 
 .line,
@@ -72,9 +75,10 @@ footer {
 }
 
 .gmap_canvas {
-  /* width: 600px;  */
   height: 100%;
+  width: 100%;
   border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .city-name {
@@ -96,12 +100,16 @@ footer {
   font-size: 70px;
 }
 
+.weather-card i {
+  font-size: 16px;
+}
+
 .weather-code-extra {
   margin-bottom: 8px;
 }
 
 .arrow-pointer {
-  font-size: 45px;
+  font-size: 45px !important;
   transform: rotate(0deg);
 }
 
@@ -121,4 +129,19 @@ footer {
 .error {
   color: red;
   margin-top: 20px;
+}
+
+.animated-gradient {
+  background: none;
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #333;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

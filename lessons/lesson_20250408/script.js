@@ -58,129 +58,245 @@ async function getWeather(userLocation, locData) {
   }
 }
 
-function getWeatherDescription(code) {
-  switch (code) {
-    case 0:
-      return "Clear sky";
-    case 1:
-      return "Mainly clear";
-    case 2:
-      return "Partly cloudy";
-    case 3:
-      return "Overcast";
-    case 45:
-      return "Fog";
-    case 48:
-      return "depositing rime fog";
-    case 51:
-      return "Drizzle: Light";
-    case 53:
-      return "Drizzle: moderate";
-    case 55:
-      return "Drizzle: dense intensity";
-    case 56:
-      return "Freezing Drizzle: Light";
-    case 57:
-      return "Freezing Drizzle: dense intensity";
-    case 61:
-      return "Rain: Slight";
-    case 63:
-      return "Rain: moderate ";
-    case 65:
-      return "Rain: heavy intensity";
-    case 66:
-      return "Freezing Rain: Light";
-    case 67:
-      return "Freezing Rain: heavy intensity";
-    case 71:
-      return "Snow fall: Slight";
-    case 73:
-      return "Snow fall: moderate";
-    case 75:
-      return "Snow fall:heavy intensity";
-    case 77:
-      return "Snow grains";
-    case 80:
-      return "Rain showers: Slight";
-    case 81:
-      return "Rain showers: moderate";
-    case 82:
-      return "Rain showers: violent";
-    case 85:
-      return "Snow showers slight";
-    case 86:
-      return "Snow showers: heavy";
-    case 95:
-      return "Thunderstorm: Slight or moderate";
-    case 96:
-      return "Thunderstorm with slight hail";
-    case 99:
-      return "Thunderstorm with heavy hail";
-    default:
-      return "Unknown weather conditions or invalid code";
-  }
-}
+// function getWeatherDescriptionFull(code) {
+//   switch (code) {
+//     case 0:
+//       return { description: "Clear sky", color: "#FFF9D6", symbol: "☀️" }; // мягкий светло-жёлтый
+//     case 1:
+//       return { description: "Mainly clear", color: "#FFEFD6", symbol: "🌤️" }; // бледно-персиковый
+//     case 2:
+//       return { description: "Partly cloudy", color: "#E8F5E9", symbol: "⛅" }; // нежно-зелёный
+//     case 3:
+//       return { description: "Overcast", color: "#E0E0E0", symbol: "☁️" }; // светло-серый
+//     case 45:
+//       return { description: "Fog", color: "#F2F2F2", symbol: "🌫️" }; // почти белый туман
+//     case 48:
+//       return { description: "Depositing rime fog", color: "#F5F5F5", symbol: "🌫️❄️" };
+//     case 51:
+//       return { description: "Drizzle: Light", color: "#E0F7FA", symbol: "🌧️💧" }; // очень светлый голубой
+//     case 53:
+//       return { description: "Drizzle: Moderate", color: "#D0EFF4", symbol: "🌧️" };
+//     case 55:
+//       return { description: "Drizzle: Dense intensity", color: "#C0E7EE", symbol: "🌧️🌧️" };
+//     case 56:
+//       return { description: "Freezing Drizzle: Light", color: "#E3F8FB", symbol: "❄️🌧️" };
+//     case 57:
+//       return { description: "Freezing Drizzle: Dense intensity", color: "#D3F0F5", symbol: "❄️🌧️🌧️" };
+//     case 61:
+//       return { description: "Rain: Slight", color: "#DDEBF6", symbol: "🌦️" };
+//     case 63:
+//       return { description: "Rain: Moderate", color: "#C9DFEF", symbol: "🌦️🌧️" };
+//     case 65:
+//       return { description: "Rain: Heavy intensity", color: "#B3D3E8", symbol: "🌧️🌧️🌧️" };
+//     case 66:
+//       return { description: "Freezing Rain: Light", color: "#E1F5FE", symbol: "❄️🌧️" };
+//     case 67:
+//       return { description: "Freezing Rain: Heavy intensity", color: "#C9E6F4", symbol: "❄️🌧️🌧️" };
+//     case 71:
+//       return { description: "Snow fall: Slight", color: "#F9FBFF", symbol: "🌨️" }; // почти белый
+//     case 73:
+//       return { description: "Snow fall: Moderate", color: "#EFF4FA", symbol: "🌨️🌨️" };
+//     case 75:
+//       return { description: "Snow fall: Heavy intensity", color: "#E3ECF3", symbol: "🌨️❄️" };
+//     case 77:
+//       return { description: "Snow grains", color: "#F4F6F7", symbol: "🌨️🌾" };
+//     case 80:
+//       return { description: "Rain showers: Slight", color: "#DAF0FF", symbol: "🌧️🌦️" };
+//     case 81:
+//       return { description: "Rain showers: Moderate", color: "#C3E6FA", symbol: "🌧️🌦️🌧️" };
+//     case 82:
+//       return { description: "Rain showers: Violent", color: "#A9D3EF", symbol: "🌧️🌩️" };
+//     case 85:
+//       return { description: "Snow showers: Slight", color: "#F0FAFC", symbol: "❄️🌨️" };
+//     case 86:
+//       return { description: "Snow showers: Heavy", color: "#D7EEF4", symbol: "❄️🌨️❄️" };
+//     case 95:
+//       return { description: "Thunderstorm: Slight or moderate", color: "#EDE7F6", symbol: "⛈️" }; // бледно-фиолетовый
+//     case 96:
+//       return { description: "Thunderstorm with slight hail", color: "#DDD6F2", symbol: "⛈️🌧️" };
+//     case 99:
+//       return { description: "Thunderstorm with heavy hail", color: "#CFC2EC", symbol: "⛈️❄️" };
+//     default:
+//       return { description: "Unknown weather conditions or invalid code", color: "#FFFFFF", symbol: "❓" };
+//   }
+// }
 
-function getWeatherDescriptionSymbol(code) {
+function getWeatherDescriptionFull(code) {
   switch (code) {
     case 0:
-      return "☀️"; // Clear sky
+      return {
+        description: "Clear sky",
+        symbol: "☀️",
+        gradient: "linear-gradient(135deg, #FFF9D6, #FFE9A7)",
+      };
     case 1:
-      return "🌤️"; // Mainly clear
+      return {
+        description: "Mainly clear",
+        symbol: "🌤️",
+        gradient: "linear-gradient(135deg, #FFEFD6, #FFD8A9)",
+      };
     case 2:
-      return "⛅"; // Partly cloudy
+      return {
+        description: "Partly cloudy",
+        symbol: "⛅",
+        gradient: "linear-gradient(135deg, #E8F5E9, #CDE4D4)",
+      };
     case 3:
-      return "☁️"; // Overcast
+      return {
+        description: "Overcast",
+        symbol: "☁️",
+        gradient: "linear-gradient(135deg, #E0E0E0, #CCCCCC)",
+      };
     case 45:
-      return "🌫️"; // Fog
+      return {
+        description: "Fog",
+        symbol: "🌫️",
+        gradient: "linear-gradient(135deg, #F2F2F2, #E3E3E3)",
+      };
     case 48:
-      return "🌫️❄️"; // Depositing rime fog
+      return {
+        description: "Depositing rime fog",
+        symbol: "🌫️❄️",
+        gradient: "linear-gradient(135deg, #F5F5F5, #DADADA)",
+      };
     case 51:
-      return "🌧️💧"; // Drizzle: Light
+      return {
+        description: "Drizzle: Light",
+        symbol: "🌧️💧",
+        gradient: "linear-gradient(135deg, #E0F7FA, #C1EAF1)",
+      };
     case 53:
-      return "🌧️"; // Drizzle: moderate
+      return {
+        description: "Drizzle: Moderate",
+        symbol: "🌧️",
+        gradient: "linear-gradient(135deg, #D0EFF4, #A9DDE7)",
+      };
     case 55:
-      return "🌧️🌧️"; // Drizzle: dense intensity
+      return {
+        description: "Drizzle: Dense intensity",
+        symbol: "🌧️🌧️",
+        gradient: "linear-gradient(135deg, #C0E7EE, #99D1DE)",
+      };
     case 56:
-      return "❄️🌧️"; // Freezing Drizzle: Light
+      return {
+        description: "Freezing Drizzle: Light",
+        symbol: "❄️🌧️",
+        gradient: "linear-gradient(135deg, #E3F8FB, #C8EBF0)",
+      };
     case 57:
-      return "❄️🌧️🌧️"; // Freezing Drizzle: dense intensity
+      return {
+        description: "Freezing Drizzle: Dense intensity",
+        symbol: "❄️🌧️🌧️",
+        gradient: "linear-gradient(135deg, #D3F0F5, #AEDFE8)",
+      };
     case 61:
-      return "🌦️"; // Rain: Slight
+      return {
+        description: "Rain: Slight",
+        symbol: "🌦️",
+        gradient: "linear-gradient(135deg, #DDEBF6, #C2DCEC)",
+      };
     case 63:
-      return "🌦️🌧️"; // Rain: moderate
+      return {
+        description: "Rain: Moderate",
+        symbol: "🌦️🌧️",
+        gradient: "linear-gradient(135deg, #C9DFEF, #A8CBE0)",
+      };
     case 65:
-      return "🌧️🌧️🌧️"; // Rain: heavy intensity
+      return {
+        description: "Rain: Heavy intensity",
+        symbol: "🌧️🌧️🌧️",
+        gradient: "linear-gradient(135deg, #B3D3E8, #8FBBD6)",
+      };
     case 66:
-      return "❄️🌧️"; // Freezing Rain: Light
+      return {
+        description: "Freezing Rain: Light",
+        symbol: "❄️🌧️",
+        gradient: "linear-gradient(135deg, #E1F5FE, #C7E5F4)",
+      };
     case 67:
-      return "❄️🌧️🌧️"; // Freezing Rain: heavy intensity
+      return {
+        description: "Freezing Rain: Heavy intensity",
+        symbol: "❄️🌧️🌧️",
+        gradient: "linear-gradient(135deg, #C9E6F4, #A5D4E5)",
+      };
     case 71:
-      return "🌨️"; // Snow fall: Slight
+      return {
+        description: "Snow fall: Slight",
+        symbol: "🌨️",
+        gradient: "linear-gradient(135deg, #F9FBFF, #E5F0FA)",
+      };
     case 73:
-      return "🌨️🌨️"; // Snow fall: moderate
+      return {
+        description: "Snow fall: Moderate",
+        symbol: "🌨️🌨️",
+        gradient: "linear-gradient(135deg, #EFF4FA, #D9E5F1)",
+      };
     case 75:
-      return "🌨️❄️"; // Snow fall: heavy intensity
+      return {
+        description: "Snow fall: Heavy intensity",
+        symbol: "🌨️❄️",
+        gradient: "linear-gradient(135deg, #E3ECF3, #C7DAE5)",
+      };
     case 77:
-      return "🌨️🌾"; // Snow grains
+      return {
+        description: "Snow grains",
+        symbol: "🌨️🌾",
+        gradient: "linear-gradient(135deg, #F4F6F7, #DDE1E2)",
+      };
     case 80:
-      return "🌧️🌦️"; // Rain showers: Slight
+      return {
+        description: "Rain showers: Slight",
+        symbol: "🌧️🌦️",
+        gradient: "linear-gradient(135deg, #DAF0FF, #BCE2F6)",
+      };
     case 81:
-      return "🌧️🌦️🌧️"; // Rain showers: moderate
+      return {
+        description: "Rain showers: Moderate",
+        symbol: "🌧️🌦️🌧️",
+        gradient: "linear-gradient(135deg, #C3E6FA, #A4D4ED)",
+      };
     case 82:
-      return "🌧️🌩️"; // Rain showers: violent
+      return {
+        description: "Rain showers: Violent",
+        symbol: "🌧️🌩️",
+        gradient: "linear-gradient(135deg, #A9D3EF, #87BCE0)",
+      };
     case 85:
-      return "❄️🌨️"; // Snow showers slight
+      return {
+        description: "Snow showers: Slight",
+        symbol: "❄️🌨️",
+        gradient: "linear-gradient(135deg, #F0FAFC, #D9EDF1)",
+      };
     case 86:
-      return "❄️🌨️❄️"; // Snow showers: heavy
+      return {
+        description: "Snow showers: Heavy",
+        symbol: "❄️🌨️❄️",
+        gradient: "linear-gradient(135deg, #D7EEF4, #BADDE6)",
+      };
     case 95:
-      return "⛈️"; // Thunderstorm: Slight or moderate
+      return {
+        description: "Thunderstorm: Slight or moderate",
+        symbol: "⛈️",
+        gradient: "linear-gradient(135deg, #EDE7F6, #D4C9EB)",
+      };
     case 96:
-      return "⛈️🌧️"; // Thunderstorm with slight hail
+      return {
+        description: "Thunderstorm with slight hail",
+        symbol: "⛈️🌧️",
+        gradient: "linear-gradient(135deg, #DDD6F2, #C2B9E7)",
+      };
     case 99:
-      return "⛈️❄️"; // Thunderstorm with heavy hail
+      return {
+        description: "Thunderstorm with heavy hail",
+        symbol: "⛈️❄️",
+        gradient: "linear-gradient(135deg, #CFC2EC, #B4A5DE)",
+      };
     default:
-      return "❓"; // Unknown weather conditions or invalid code
+      return {
+        description: "Unknown weather conditions or invalid code",
+        symbol: "❓",
+        gradient: "linear-gradient(135deg, #FFFFFF, #EEEEEE)",
+      };
   }
 }
 
@@ -188,22 +304,22 @@ function weatherData(weatherData, locData) {
   const currentWeather = weatherData.current_weather;
   const units = weatherData.current_weather_units;
 
-  const weatherDescription = getWeatherDescription(currentWeather.weathercode);
-  const weatherDescriptionSymbol = getWeatherDescriptionSymbol(currentWeather.weathercode);
+  const weatherDescription = getWeatherDescriptionFull(weatherData.current_weather.weathercode);
 
   console.log(weatherData);
-  //console.log(weatherDescriptionSymbol);
 
   document.querySelector(".city-name").innerHTML = locData.city + "<br> " + locData.region;
 
-  document.querySelector(".temperature").innerText = `${currentWeather.temperature} ${units.temperature}`;
-  document.querySelector(".wind-speed").textContent = `${currentWeather.windspeed} ${units.windspeed}`;
+  document.querySelector(".temperature").innerHTML = `<i>Temperature:</i><br>${currentWeather.temperature} ${units.temperature}`;
+  document.querySelector(".wind-speed").innerHTML = `<i>Wind speed:</i><br>${currentWeather.windspeed} ${units.windspeed}`;
+  document.querySelector(".wind-direction").innerHTML = `<i>Wind direction:</i><br>${currentWeather.winddirection} ${units.winddirection}`;
 
-  document.querySelector(".wind-direction").innerText = currentWeather.winddirection + " " + units.winddirection;
+  document.querySelector(".weather-code").innerText = weatherDescription.description;
+  document.querySelector(".weather-code-icon").innerText = weatherDescription.symbol;
 
-  document.querySelector(".weather-code").innerText = weatherDescription;
-
-  document.querySelector(".weather-code-icon").innerText = weatherDescriptionSymbol;
+  // const bodyColor = document.querySelector("body");
+  // bodyColor.className = "animated-gradient";
+  // bodyColor.style.background = weatherDescription.gradient;
 
   arrowRotation(currentWeather);
 
