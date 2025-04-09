@@ -319,14 +319,9 @@ function weatherData(weatherData, locData) {
   document.querySelector(".weather-code-icon").innerText = weatherDescription.symbol;
 
   const bodyColor = document.querySelector(".animated-gradient");
-  // bodyColor.className = "animated-gradient";
-  bodyColor.style.background = weatherDescription.gradient;
-  // bodyColor.style.animation = "gradientShift 8s ease infinite";
-  // setTimeout(() => {
-  bodyColor.style.animation = "gradientShift 1s ease infinite";
-  // }, 500);
+  bodyColor.className = `animated-gradient code-${weatherCode}`;
 
-  arrowRotation(currentWeather);
+  arrowRotation(currentWeather); // ! Arrow init
 
   if (currentWeather.weathercode === 95 || currentWeather.weathercode === 99) {
     document.querySelector(".weather-code-extra").innerText = "* Thunderstorm forecast with hail is only available in Central Europe";

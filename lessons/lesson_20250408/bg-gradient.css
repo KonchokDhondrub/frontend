@@ -1,0 +1,43 @@
+.animated-gradient {
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    transition: background 1s ease-in-out;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Градиенты по кодам */
+  .code-0 { background: linear-gradient(135deg, #FFD54F, #FFB300); }
+  .code-1 { background: linear-gradient(135deg, #FFE082, #FFD54F); }
+  .code-2 { background: linear-gradient(135deg, #B3E5FC, #81D4FA); }
+  .code-3 { background: linear-gradient(135deg, #9aabb3, #B0BEC5); }
+  .code-45 { background: linear-gradient(135deg, #CFD8DC, #ECEFF1); }
+  .code-48 { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+  .code-51 { background: linear-gradient(135deg, #B3E5FC, #4FC3F7); }
+  .code-53 { background: linear-gradient(135deg, #4FC3F7, #0288D1); }
+  .code-55 { background: linear-gradient(135deg, #0288D1, #01579B); }
+  .code-56 { background: linear-gradient(135deg, #B3E5FC, #E1F5FE); }
+  .code-57 { background: linear-gradient(135deg, #81D4FA, #0288D1); }
+  .code-61 { background: linear-gradient(135deg, #81D4FA, #4FC3F7); }
+  .code-63 { background: linear-gradient(135deg, #4FC3F7, #0288D1); }
+  .code-65 { background: linear-gradient(135deg, #01579B, #003C8F); }
+  .code-66 { background: linear-gradient(135deg, #E1F5FE, #B3E5FC); }
+  .code-67 { background: linear-gradient(135deg, #81D4FA, #4FC3F7); }
+  .code-71 { background: linear-gradient(135deg, #E0F7FA, #E1F5FE); }
+  .code-73 { background: linear-gradient(135deg, #B3E5FC, #81D4FA); }
+  .code-75 { background: linear-gradient(135deg, #90CAF9, #42A5F5); }
+  .code-77 { background: linear-gradient(135deg, #CFD8DC, #B0BEC5); }
+  .code-80 { background: linear-gradient(135deg, #81D4FA, #4FC3F7); }
+  .code-81 { background: linear-gradient(135deg, #4FC3F7, #0288D1); }
+  .code-82 { background: linear-gradient(135deg, #01579B, #003C8F); }
+  .code-85 { background: linear-gradient(135deg, #E0F2F1, #B2DFDB); }
+  .code-86 { background: linear-gradient(135deg, #B2EBF2, #4DD0E1); }
+  .code-95 { background: linear-gradient(135deg, #9575CD, #512DA8); }
+  .code-96 { background: linear-gradient(135deg, #7E57C2, #4527A0); }
+  .code-99 { background: linear-gradient(135deg, #673AB7, #311B92); }
+  .code-default { background: linear-gradient(135deg, #E0E0E0, #BDBDBD); }
+  

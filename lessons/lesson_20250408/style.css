@@ -1,18 +1,21 @@
+@import url(bg-gradient.css);
+
 body {
   display: flex;
   flex-direction: column;
-  /* font-family: Arial, sans-serif; */
+  align-items: center;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 500px;
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
 }
 
 header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
 }
 
@@ -32,35 +35,22 @@ header h3 {
 }
 
 .animated-gradient {
-  width: 100%;
-  margin: 10px;
-  /* background: linear-gradient(135deg, #FFF9D6, #edb50f); */
-  background-size: 400% 400%;
-  padding: 1rem;
-  color: #333;
-  /* transition: background 4s ease-in-out; */
-  /* animation: gradientShift 4s ease infinite; */
-}
+  /* width: 100%; */
+  margin: 10px 0;
+  padding: 10px;
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  color: #333;
 }
 
 main {
-  margin: 15px 10px;
+  padding: 15px 0;
   font-size: 20px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   gap: 20px;
+
+  width: 100%;
 }
 
 footer {
@@ -119,6 +109,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -145,6 +136,7 @@ footer {
 
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: space-around;
   gap: 10px;
 }
@@ -176,4 +168,43 @@ footer {
 
 .animated-gradient {
   border: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+
+    margin: 5px 10px;
+  }
+
+  main {
+    padding: 15px 0;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .weather-code-container,
+  .weather-card,
+  .gmap_canvas {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+    width: 100%;
+    text-wrap: wrap;
+    font-size: 25px;
+  }
+
+  .weather-card {
+    flex-direction: column;
+  }
 }
