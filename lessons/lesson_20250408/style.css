@@ -30,10 +30,6 @@ header h3 {
   font-weight: 300;
 }
 
-.city-name {
-  /* text-shadow: 0 0 1px #333; */
-}
-
 .animated-gradient {
   /* width: 100%; */
   margin: 10px 0;
@@ -51,10 +47,6 @@ main {
   gap: 20px;
 
   width: 100%;
-}
-
-footer {
-  /* margin: 5px; */
 }
 
 .line,
@@ -90,10 +82,6 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.map-container {
-  /* height: 100%; */
 }
 
 .gmap_canvas {
