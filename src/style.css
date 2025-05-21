@@ -82,7 +82,7 @@ a:hover {
   padding: 0 30px 30px;
   border: 1px solid rgba(131, 130, 130, 0.825);
   text-wrap-mode: wrap;
-  background-color: rgba(0, 0, 0, 0.253);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .row {
